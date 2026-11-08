@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Recomendador de películas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>DiegoVJ</h1>
+    <p>Encuentra tu película ideal según tu edad y estado de ánimo</p>
+</header>
+<main>
+    <section class="panel">
+        <h2>Datos del usuario</h2>
+        <label>Edad:</label>
+        <input type="number" id="edad" min="1" max="120" placeholder="Ingresa tu edad">
+        <label>¿Tienes problemas cardíacos?</label>
+        <select id="corazon">
+            <option value="">Selecciona</option>
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+            <option value="noindica">Prefiero no indicarlo</option>
+        </select>
+        <label>¿Cuál es tu estado de ánimo?</label>
+        <select id="animo">
+            <option value="">Selecciona</option>
+            <option value="feliz"> Feliz</option>
+            <option value="triste"> Triste</option>
+            <option value="estresado"> Estresado</option>
+            <option value="aburrido"> Aburrido</option>
+            <option value="ansioso"> Ansioso</option>
+            <option value="tranquilo"> Tranquilo</option>
+            <option value="emocionado"> Emocionado</option>
+        </select>
+        <label>Categoría de película:</label>
+        <select id="categoria">
+            <option value="todas">Todas</option>
+            <option value="comedia">Comedia</option>
+            <option value="romance">Romance</option>
+            <option value="animacion">Animación</option>
+            <option value="drama">Drama</option>
+            <option value="accion">Acción</option>
+            <option value="terror">Terror</option>
+            <option value="aventura">Aventura</option>
+            <option value="ciencia">Ciencia ficción</option>
+        </select>
+        <button onclick="recomendar()">Recomendar películas</button>
+        <button class="secundario" onclick="limpiar()">Limpiar</button>
+    </section>
+    <section id="results" class="panel oculto">
+        <h2>🍿 Películas recomendadas</h2>
+        <p id="mensaje"></p>
+        <div id="peliculas" class="grid"></div>
+    </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
